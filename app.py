@@ -5,11 +5,10 @@ from fastapi import FastAPI
 app = FastAPI()
 
 
-@app.get("/")
-async def read_root():
-    return {"Hello": "World"}
+@app.get("/blog")
+async def blogs(limit: int = 10, published: bool = True):
 
-
-@app.post("/items/{item_id}")
-async def read_item(item_id: int, q: Optional[str] = None):
-    return {"item_id": item_id, "q": q}
+   if published:
+      return {"data": f"{limit} published blogs fetched"}
+   else:
+      return {"data": f"{limit} non published blogs fetched"}
