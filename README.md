@@ -37,4 +37,4 @@ Work in Progress
 ## Other Stuff
 1. Using ENV variables
 2. Refactor Code to Deploy API to AWS Lambda
-3. User Serverless framework to provision resources
+3. Using Serverless framework to provision resources
