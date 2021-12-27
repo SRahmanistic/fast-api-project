@@ -6,28 +6,28 @@ Basic Blog (Self-Learning) Application Project that has the CRUD opertions for B
 
 Work in Progress
 
-- [] Framework Features
-- [] Path Parameters
-- [] API Docs
-- [] Query Parameters
-- [] Request Body
-- [] Debugging
-- [] Pydantic Schemas
-- [] Database Connection
-- [] Create Model and Tables
-- [] Store blog to database
-- [] Get blog from database
-- [] Exception & Status Code
-- [] Delete a blog
-- [] Response Model
-- [] Create User
-- [] Hash Password
-- [] Show User
-- [] Using Doc Tags
-- [] Relationship
-- [] API Router
-- [] API router path operators
-- [] Blog & User respository
+- [ ] Framework Features
+- [ ] Path Parameters
+- [ ] API Docs
+- [ ] Query Parameters
+- [ ] Request Body
+- [ ] Debugging
+- [ ] Pydantic Schemas
+- [ ] Database Connection
+- [ ] Create Model and Tables
+- [ ] Store blog to database
+- [ ] Get blog from database
+- [ ] Exception & Status Code
+- [ ] Delete a blog
+- [ ] Response Model
+- [ ] Create User
+- [ ] Hash Password
+- [ ] Show User
+- [ ] Using Doc Tags
+- [ ] Relationship
+- [ ] API Router
+- [ ] API router path operators
+- [ ] Blog & User respository
 - [x] Logn & verify Password
 - [x] JWT Access Token
 - [x] Route behind authentication
