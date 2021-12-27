@@ -1,7 +1,9 @@
-from sqlalchemy.orm import Session
+from fastapi import HTTPException, status
+
 from .. import models
 
-def get_all(db:Session):
+
+def get_all(db):
     blogs = db.query(models.Blog).all()
     return blogs
 
@@ -16,4 +18,19 @@ def create(new_blog,db):
     db.add(newBlog)
     db.commit()
     db.refresh(newBlog)
-    return newBlog 
+    return newBlog
+
+def delete(id,db):
+    blog = db.query(models.Blog).filter(models.Blog.id == id).delete(synchronize_session=False)
+    db.commit()
+    return 'done'
+
+
+def update(id, request,db):
+    blog = db.query(models.Blog).filter(models.Blog.id == id).first()
+    if not blog:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f'Blog with id {id} not available')
+    
+    db.query(models.Blog).filter(models.Blog.id == id).update(request.dict())
+    db.commit()
+    return 'updated'

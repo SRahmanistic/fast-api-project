@@ -23,8 +23,8 @@ class ShowUser(BaseModel):
         orm_mode = True
 
 class ShowBlog(BaseModel):
-    title: str
-    body:str
+    # title: str
+    # body:str
     creator: ShowUser
 
     class Config():

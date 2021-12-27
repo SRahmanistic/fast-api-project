@@ -25,17 +25,8 @@ def create_blog(new_blog: schemas.Blog, db: Session = Depends(get_db)):
 
 @router.delete("/delete/{id}", status_code=status.HTTP_204_NO_CONTENT)
 def delete(id: int, db: Session = Depends(get_db)):
-    blog = db.query(models.Blog).filter(models.Blog.id == id).delete(synchronize_session=False)
-    db.commit()
-    return 'done'
+    return blog.delete(id,db)
 
 @router.put("/update/{id}", status_code=status.HTTP_202_ACCEPTED)
 def update(id: int, request: schemas.Blog,db: Session = Depends(get_db)):
-    blog = db.query(models.Blog).filter(models.Blog.id == id).first()
-    if not blog:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f'Blog with id {id} not available')
-    
-    db.query(models.Blog).filter(models.Blog.id == id).update(request.dict())
-    db.commit()
-    return 'updated'
-
+    return blog.update(id, request,db)
