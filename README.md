@@ -28,8 +28,8 @@ Work in Progress
 - [x] API Router
 - [x] API router path operators
 - [x] Blog & User respository
-- [ ] Logn & verify Password
-- [ ] JWT Access Token
+- [x] Logn & verify Password
+- [x] JWT Access Token
 - [ ] Route behind authentication
 - [ ] Deploy fastAPI app
 

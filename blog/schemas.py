@@ -43,3 +43,7 @@ class Token(BaseModel):
 
 class TokenData(BaseModel):
     email: Optional[str] = None
+
+class Login(BaseModel):
+    username: str
+    password: str
