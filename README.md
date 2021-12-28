@@ -30,7 +30,7 @@ Work in Progress
 - [x] Blog & User respository
 - [x] Logn & verify Password
 - [x] JWT Access Token
-- [ ] Route behind authentication
+- [x] Route behind authentication
 - [ ] Deploy fastAPI app
 
 
